@@ -29,6 +29,9 @@ module.exports = {
     },
     `gatsby-transformer-json`,
     {
+       resolve: `gatsby-plugin-emotion`
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `./resources`,
