@@ -15,6 +15,7 @@ export default ({children}) => {
       }`}
       render={({allResourcesJson: {edges: [{node}]}}) => {
           const { CatalogEntryView: [entry] } = node
+          console.log('entry', entry)
           const { title, Images } = entry
           console.log('Images', Images)
           return(<div>{title}</div>)
