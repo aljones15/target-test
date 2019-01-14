@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Box from '../styled/box'
 import Row from '../styled/row'
+import Carousel from './carousel'
 
 export default ({children, skip, take}) => {
     return(<StaticQuery
@@ -18,12 +19,14 @@ export default ({children, skip, take}) => {
       render={({allResourcesJson: {edges: [{node}]}}) => {
           const { CatalogEntryView: [entry] } = node
           console.log('entry', entry)
-          const { title, Images } = entry
-          console.log('Images', Images)
+          const { title, Images, CustomerReview, ItemDescription, Offers, Promotions, ReturnPolicy } = entry
           return (
           <React.Fragment>
           <Row>
-            <Box><div>{title}</div></Box><Box>Two</Box>
+            <Box>
+              <Carousel title={title} images={Images} />
+            </Box>
+            <Box>Two</Box>
           </Row>
           <Row>
             <Box>Three</Box><Box>Four</Box>

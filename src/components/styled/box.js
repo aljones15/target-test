@@ -5,7 +5,9 @@ const Box = styled.div({
     display: 'flex',
     flexGrow: 1,
     flexShrink: 1,
-    padding: '0.5rem'
+    padding: '0.5rem',
+    maxHeight: '50%',
+    maxWidth: '50%'
   })
 
   export default Box
