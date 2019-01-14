@@ -1,7 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import Box from '../styled/box'
+import Row from '../styled/row'
 
-export default ({children}) => {
+export default ({children, skip, take}) => {
     return(<StaticQuery
       query={graphql`
       query {
@@ -18,7 +20,15 @@ export default ({children}) => {
           console.log('entry', entry)
           const { title, Images } = entry
           console.log('Images', Images)
-          return(<div>{title}</div>)
+          return (
+          <React.Fragment>
+          <Row>
+            <Box><div>{title}</div></Box><Box>Two</Box>
+          </Row>
+          <Row>
+            <Box>Three</Box><Box>Four</Box>
+          </Row>   
+          </React.Fragment>)
       }}
       />)
 }
