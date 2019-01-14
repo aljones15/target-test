@@ -14,8 +14,10 @@ export default ({children}) => {
         }
       }`}
       render={({allResourcesJson: {edges: [{node}]}}) => {
-          console.log('data', node);
-          return(<div>Data Recieved</div>);
+          const { CatalogEntryView: [entry] } = node
+          const { title, Images } = entry
+          console.log('Images', Images)
+          return(<div>{title}</div>)
       }}
       />)
 }
