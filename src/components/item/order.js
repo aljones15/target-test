@@ -21,7 +21,7 @@ class Order extends React.PureComponent {
                 {price.formattedPriceValue} {price.priceQualifier}
               </div>
               <div>
-                  {promos.map(({Description: [{shortDescription}]}) => (<p>{shortDescription}</p>))}
+                  {promos.map(({Description: [{shortDescription}]}) => (<p key={shortDescription}>{shortDescription}</p>))}
               </div>
               <div>
                   <input type="number" min={0} />

@@ -4,6 +4,7 @@ import Box from '../styled/box'
 import Row from '../styled/row'
 import Carousel from './carousel'
 import Order from './order'
+import Highlights from './highlights'
 
 export default ({children, skip, take}) => {
     return(<StaticQuery
@@ -40,7 +41,12 @@ export default ({children, skip, take}) => {
             </Box>
           </Row>
           <Row>
-            <Box>Three</Box><Box>Four</Box>
+            <Box>
+              Reviews
+            </Box>
+            <Box>
+              <Highlights description={ItemDescription} />
+            </Box>
           </Row>   
           </React.Fragment>)
       }}
