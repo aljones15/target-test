@@ -19,7 +19,14 @@ class Image extends React.PureComponent {
         const uri = error ? missing : src
         return(
             <ImageHolder>
-              <Img alt="product image" size={size} loaded={loaded} src={uri} onError={this.handleError} onLoad={this.handleLoad} />
+              <Img
+                alt="product image"
+                size={size}
+                loaded={loaded}
+                src={uri}
+                onError={this.handleError}
+                onLoad={this.handleLoad}
+              />
               {loaded ? null :  <Spinner />}
             </ImageHolder>
         )

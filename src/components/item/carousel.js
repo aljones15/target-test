@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from './image'
 import { Title, Thumbnails, Stretcher } from './styled/carousel'
-import { Alert } from '@blueprintjs/core';
+import { Icon } from '@blueprintjs/core';
 
 class Carousel extends React.PureComponent {
     constructor(props, context) {
@@ -20,6 +20,9 @@ class Carousel extends React.PureComponent {
                 <Title>{title}</Title>
                 <div id="main-image">
                   <Image src={Primary} size="200px" />
+                </div>
+                <div>
+                <Icon icon="zoom-in" /> <span>view larger</span>
                 </div>
                 <Thumbnails id="carousel">
                   <Stretcher size={Alternatives.length}>
