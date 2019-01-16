@@ -5,6 +5,7 @@ import Row from '../styled/row'
 import Carousel from './carousel'
 import Order from './order'
 import Highlights from './highlights'
+import Reviews from './reviews'
 
 export default ({children, skip, take}) => {
     return(<StaticQuery
@@ -42,7 +43,7 @@ export default ({children, skip, take}) => {
           </Row>
           <Row>
             <Box>
-              Reviews
+              <Reviews reviews={CustomerReview} />
             </Box>
             <Box>
               <Highlights description={ItemDescription} />

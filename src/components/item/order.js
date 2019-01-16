@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from '@blueprintjs/core'
+import { Button, Icon } from '@blueprintjs/core'
+import { Price, Text, Promotions } from './styled/order'
 
 class Order extends React.PureComponent {
     constructor(props) {
@@ -18,11 +19,11 @@ class Order extends React.PureComponent {
         return(
             <div id="offers">
               <div id="price">
-                {price.formattedPriceValue} {price.priceQualifier}
+                <Price style={{display: 'inline'}}>{price.formattedPriceValue}</Price> <Text color="grey">{price.priceQualifier}</Text>
               </div>
-              <div>
-                  {promos.map(({Description: [{shortDescription}]}) => (<p key={shortDescription}>{shortDescription}</p>))}
-              </div>
+              <Promotions>
+                  {promos.map(({Description: [{shortDescription}]}) => (<p key={shortDescription}><Icon icon="tag" />{' '}{shortDescription}</p>))}
+              </Promotions>
               <div>
                   <input type="number" min={0} />
               </div>
