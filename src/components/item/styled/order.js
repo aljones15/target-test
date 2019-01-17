@@ -30,3 +30,15 @@ export const Price = styled.h3({
       marginBottom: '1rem',
       marginTop: '1rem'
   })
+
+  export const Returns = styled.span({
+      marginRight: '1rem',
+      fontSize: '1.2rem',
+      color: 'grey'
+  })
+
+  export const ReturnDetails = styled.span({
+      fontSize: '0.5rem',
+      borderLeft: '1px solid black',
+      paddingLeft: '0.25rem'
+  })

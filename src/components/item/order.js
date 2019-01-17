@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, Icon, ButtonGroup } from '@blueprintjs/core'
-import { Price, Text, Promotions, PromoItem, Padded } from './styled/order'
+import { Icon } from '@blueprintjs/core'
+import { Price, Text, Promotions, PromoItem, Padded, Returns, ReturnDetails } from './styled/order'
 import { BoxButton, RoundButton } from './styled/buttons'
 
 class Order extends React.PureComponent {
@@ -17,14 +17,16 @@ class Order extends React.PureComponent {
             returns
         } = this.props
         const [{OfferPrice: [price]}] = offers
+        const [{ReturnPolicyDetails: [{policyDays}]}] = returns
+        console.log('returns', returns)
         return(
             <div id="offers">
-              <div id="price">
+              <Padded id="price">
                 <Price>{price.formattedPriceValue}</Price> <Text color="grey">{price.priceQualifier}</Text>
-              </div>
+              </Padded>
               <Padded>
                 <Promotions>
-                  {promos.map(({Description: [{shortDescription}]}) => (<PromoItem key={shortDescription}><Icon icon="tag" />{' '}{shortDescription}</PromoItem>))}
+                  {promos.map(({Description: [{shortDescription}]}) => (<PromoItem key={shortDescription}><Icon icon="tag" />{'   '}{shortDescription}</PromoItem>))}
                 </Promotions>
               </Padded>
               <Padded>
@@ -35,9 +37,9 @@ class Order extends React.PureComponent {
                   {'    '}
                   <BoxButton color="red">ADD TO CART</BoxButton>
               </Padded>
-              <div>
-                  returns
-              </div>
+              <Padded>
+                  <Returns>returns</Returns><ReturnDetails>{`This item must be returned within ${policyDays} of the ship date. See return policy for details. Prices, promotions, styles and availability may very by store and online`}</ReturnDetails>
+              </Padded>
               <Padded>
                   <RoundButton>ADD TO REGISTRY</RoundButton>
                   <RoundButton>ADD TO LIST</RoundButton>
