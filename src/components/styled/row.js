@@ -8,7 +8,7 @@ const Row = styled.div({
     margin: '1rem',
     padding: '1rem',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'baseline'
   })
 
   export default Row

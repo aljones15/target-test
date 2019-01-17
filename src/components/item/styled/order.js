@@ -27,8 +27,8 @@ export const Price = styled.h3({
   })
 
   export const Padded = styled.div({
-      marginBottom: '1rem',
-      marginTop: '1rem',
+      marginBottom: '1.5rem',
+      marginTop: '1.5rem',
       width: '100%'
   })
 
