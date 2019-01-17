@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from './image'
-import { Title, Thumbnails, Stretcher } from './styled/carousel'
+import { Title, Thumbnails, Stretcher, Container } from './styled/carousel'
 import { Icon } from '@blueprintjs/core';
 
 class Carousel extends React.PureComponent {
@@ -16,10 +16,10 @@ class Carousel extends React.PureComponent {
         const Primary = uris.PrimaryImage[0].image
         const Alternatives = uris.AlternateImages || []
         return(
-            <div>
+            <Container>
                 <Title>{title}</Title>
                 <div id="main-image">
-                  <Image src={Primary} size="200px" />
+                  <Image src={Primary} size="300px" />
                 </div>
                 <div>
                 <Icon icon="zoom-in" /> <span>view larger</span>
@@ -29,7 +29,7 @@ class Carousel extends React.PureComponent {
                     {Alternatives.map(({image}) => <Image key={image} src={image} />)}
                   </Stretcher>
                 </Thumbnails>
-            </div>
+            </Container>
         )
     }
 }

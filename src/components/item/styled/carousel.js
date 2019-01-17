@@ -17,14 +17,14 @@ export const Title = styled.h1({
 
   export const Img = styled.img(({loaded, size}) => ({
     display: loaded ? 'inline-block' : 'none',
-    width: size || '50px',
-    height: size || '50px',
+    width: size || '100px',
+    height: size || '100px',
     ':hover': hover
 }))
 
 export const Thumbnails = styled.div({
-    width: '150px',
-    height: '50px',
+    width: '300px',
+    height: '100px',
     overflowX: 'auto',
     overflowY: 'hidden',
 })
@@ -32,3 +32,10 @@ export const Thumbnails = styled.div({
 export const Stretcher = styled.div(({size}) => ({
     width: `${size * 50}px`
 }))
+
+export const Container = styled.div({
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column'
+})
