@@ -30,7 +30,7 @@ export const Thumbnails = styled.div({
 })
 
 export const Stretcher = styled.div(({size}) => ({
-    width: `${size * 50}px`
+    width: `${size * 100}px`
 }))
 
 export const Container = styled.div({
