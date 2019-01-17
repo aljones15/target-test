@@ -8,7 +8,8 @@ const Container = styled.div({
     margin: '1rem',
     padding: '1rem',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    fontFamily: 'Helvetica Neue LT Std'
   })
 
   export default Container
