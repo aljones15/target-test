@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Icon, ButtonGroup } from '@blueprintjs/core'
 import { Price, Text, Promotions, PromoItem, Padded } from './styled/order'
+import { BoxButton, RoundButton } from './styled/buttons'
 
 class Order extends React.PureComponent {
     constructor(props) {
@@ -19,7 +20,7 @@ class Order extends React.PureComponent {
         return(
             <div id="offers">
               <div id="price">
-                <Price style={{display: 'inline'}}>{price.formattedPriceValue}</Price> <Text color="grey">{price.priceQualifier}</Text>
+                <Price>{price.formattedPriceValue}</Price> <Text color="grey">{price.priceQualifier}</Text>
               </div>
               <Padded>
                 <Promotions>
@@ -30,18 +31,18 @@ class Order extends React.PureComponent {
                   <input type="number" min={0} />
               </Padded>
               <Padded>
-                  <Button intent="danger" text="PICK UP IN STORE" />
+                  <BoxButton color="red">PICK UP IN STORE</BoxButton>
                   {'    '}
-                  <Button intent="danger" text="ADD TO CART" />
+                  <BoxButton color="red">ADD TO CART</BoxButton>
               </Padded>
               <div>
                   returns
               </div>
-              <ButtonGroup>
-                  <Button>ADD TO REGISTRY</Button>
-                  <Button>ADD TO LIST</Button>
-                  <Button>SHARE</Button>
-              </ButtonGroup>
+              <Padded>
+                  <RoundButton>ADD TO REGISTRY</RoundButton>
+                  <RoundButton>ADD TO LIST</RoundButton>
+                  <RoundButton>SHARE</RoundButton>
+              </Padded>
             </div>
         )
     }
