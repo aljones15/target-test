@@ -1,6 +1,9 @@
 import React from 'react'
 import { Icon } from '@blueprintjs/core'
-import { Price, Text, Promotions, PromoItem, Padded, Returns, ReturnDetails } from './styled/order'
+import { Price, Text, 
+    Promotions, PromoItem, 
+    Padded, 
+    Returns, ReturnDetails, ReturnTitle } from './styled/order'
 import { BoxButton, RoundButton } from './styled/buttons'
 
 class Order extends React.PureComponent {
@@ -34,12 +37,11 @@ class Order extends React.PureComponent {
               </Padded>
               <Padded>
                   <BoxButton color="red">PICK UP IN STORE</BoxButton>
-                  {'    '}
                   <BoxButton color="red">ADD TO CART</BoxButton>
               </Padded>
-              <Padded>
-                  <Returns>returns</Returns><ReturnDetails>{`This item must be returned within ${policyDays} of the ship date. See return policy for details. Prices, promotions, styles and availability may very by store and online`}</ReturnDetails>
-              </Padded>
+              <Returns>
+                  <ReturnTitle>returns</ReturnTitle><ReturnDetails>{`This item must be returned within ${policyDays} days of the ship date. See return policy for details. Prices, promotions, styles and availability may very by store and online`}</ReturnDetails>
+              </Returns>
               <Padded>
                   <RoundButton>ADD TO REGISTRY</RoundButton>
                   <RoundButton>ADD TO LIST</RoundButton>

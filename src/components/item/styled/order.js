@@ -28,17 +28,33 @@ export const Price = styled.h3({
 
   export const Padded = styled.div({
       marginBottom: '1rem',
-      marginTop: '1rem'
+      marginTop: '1rem',
+      width: '100%'
   })
 
   export const Returns = styled.span({
       marginRight: '1rem',
       fontSize: '1.2rem',
-      color: 'grey'
+      color: 'grey',
+      width: '100%'
   })
 
   export const ReturnDetails = styled.span({
       fontSize: '0.5rem',
-      borderLeft: '1px solid black',
-      paddingLeft: '0.25rem'
+      marginLeft: '0.5rem',
+      wordWrap: 'break-word',
+      width: '60%',
+      float: 'left',
+      textAlign: 'left',
+      verticalAlign: 'middle'
+  })
+
+  export const ReturnTitle = styled.span({
+    paddingRight: '0.5rem',
+    fontSize: '100%',
+    color: 'grey',
+    borderRight: '1px solid grey',
+    width: '4em',
+    height: '1.4rem',
+    float: 'left'
   })
