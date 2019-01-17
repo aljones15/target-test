@@ -14,7 +14,19 @@ export const Price = styled.h3({
   export const Promotions = styled.div({
       borderTop: "1px solid rgba(0,0,0,0.1)",
       borderBottom: "1px solid rgba(0,0,0,0.1)",
-      margin: '1rem',
-      padding: '0.25rem',
+      paddingTop: '0.75rem',
+      paddingBottom: '0.75rem',
       color: '#c50f0f'
+  })
+
+  export const PromoItem = styled.p({
+      margin: '0px',
+      marginBottom: '0px',
+      fontSize: '0.75rem',
+      color: '#e23636'
+  })
+
+  export const Padded = styled.div({
+      marginBottom: '1rem',
+      marginTop: '1rem'
   })

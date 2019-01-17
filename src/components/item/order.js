@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, Icon } from '@blueprintjs/core'
-import { Price, Text, Promotions } from './styled/order'
+import { Button, Icon, ButtonGroup } from '@blueprintjs/core'
+import { Price, Text, Promotions, PromoItem, Padded } from './styled/order'
 
 class Order extends React.PureComponent {
     constructor(props) {
@@ -21,24 +21,27 @@ class Order extends React.PureComponent {
               <div id="price">
                 <Price style={{display: 'inline'}}>{price.formattedPriceValue}</Price> <Text color="grey">{price.priceQualifier}</Text>
               </div>
-              <Promotions>
-                  {promos.map(({Description: [{shortDescription}]}) => (<p key={shortDescription}><Icon icon="tag" />{' '}{shortDescription}</p>))}
-              </Promotions>
-              <div>
+              <Padded>
+                <Promotions>
+                  {promos.map(({Description: [{shortDescription}]}) => (<PromoItem key={shortDescription}><Icon icon="tag" />{' '}{shortDescription}</PromoItem>))}
+                </Promotions>
+              </Padded>
+              <Padded>
                   <input type="number" min={0} />
-              </div>
-              <div>
-                  <Button>PICK UP IN STORE</Button>
-                  <Button>ADD TO CART</Button>
-              </div>
+              </Padded>
+              <Padded>
+                  <Button intent="danger" text="PICK UP IN STORE" />
+                  {'    '}
+                  <Button intent="danger" text="ADD TO CART" />
+              </Padded>
               <div>
                   returns
               </div>
-              <div>
+              <ButtonGroup>
                   <Button>ADD TO REGISTRY</Button>
                   <Button>ADD TO LIST</Button>
                   <Button>SHARE</Button>
-              </div>
+              </ButtonGroup>
             </div>
         )
     }
