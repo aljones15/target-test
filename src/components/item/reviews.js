@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '@blueprintjs/core'
-import { Top, ReviewSection, ReviewTitle, Stars } from './styled/reviews'
+import { Top, TopText, ReviewSection, ReviewTitle, Stars } from './styled/reviews'
 
 class ItemReviews extends React.PureComponent {
     constructor(props) {
@@ -28,24 +28,37 @@ class ItemReviews extends React.PureComponent {
         return(
             <div style={{width: '100%'}}>
                 <Top>
-                    <span>
-                      <Stars>{this.makeStars(consolidatedOverallRating)}</Stars> overall
-                    </span>
-                    <span>
-                        {`view all ${totalReviews} reviews`}
-                    </span>
+                    <TopText align="left">
+                      <Stars>
+                        {this.makeStars(consolidatedOverallRating)}
+                      </Stars> overall
+                    </TopText>
+                    <TopText align="right">
+                      {`view all ${totalReviews} reviews`}
+                    </TopText>
                 </Top>
-                <div style={{width: '100%'}}>
+                <div style={{width: '100%', float: 'clear'}}>
                     <ReviewSection float="left">
                       <ReviewTitle>
-                          Pro
+                          <h4>Pro</h4>
+                          <em>Most helpful 4-5 star review</em>
                       </ReviewTitle>
+                      <Stars>{this.makeStars(Pro[0].overallRating)}</Stars>
+                      <h4>{Pro[0].title}</h4>
+                        <p>
+                            {Pro[0].review}
+                        </p>
                     </ReviewSection>
                     <ReviewSection float="right">
                       <ReviewTitle>
-                          Con
+                          <h4>Con</h4>
+                          <em>Most helpful 1-2 star review</em>
                       </ReviewTitle>
-
+                      <Stars>{this.makeStars(Con[0].overallRating)}</Stars>
+                        <h4>{Con[0].title}</h4>
+                        <p>
+                            {Con[0].review}
+                        </p>
                     </ReviewSection>
                 </div>
             </div>
