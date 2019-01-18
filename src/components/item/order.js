@@ -1,9 +1,9 @@
 import React from 'react'
 import { Icon } from '@blueprintjs/core'
 import { Price, Text, 
-    Promotions, PromoItem, 
-    Padded, 
-    Returns, ReturnDetails, ReturnTitle } from './styled/order'
+    Promotions, PromoItem, Padded, 
+    Returns, ReturnDetails, ReturnTitle,
+    Counter, CounterContainer  } from './styled/order'
 import { BoxButton, RoundButton } from './styled/buttons'
 
 class Order extends React.PureComponent {
@@ -13,6 +13,14 @@ class Order extends React.PureComponent {
             quantity: 0,
         }
     }
+    handleDecrement = () => {
+        let { quantity } = this.state
+        if (quantity > 0) {
+            const next = --quantity
+            this.setState({quantity: next})
+        }
+    }
+    handleIncrement = () => this.setState(({quantity}) => ({quantity: ++quantity}))
     render() {
         const {
             offers,
@@ -21,7 +29,7 @@ class Order extends React.PureComponent {
         } = this.props
         const [{OfferPrice: [price]}] = offers
         const [{ReturnPolicyDetails: [{policyDays}]}] = returns
-        console.log('returns', returns)
+        const btnGrey = '#AAAAAA'
         return(
             <div id="offers">
               <Padded id="price">
@@ -29,18 +37,41 @@ class Order extends React.PureComponent {
               </Padded>
               <Padded>
                 <Promotions>
-                  {promos.map(({Description: [{shortDescription}]}) => (<PromoItem key={shortDescription}><Icon icon="tag" />{'   '}{shortDescription}</PromoItem>))}
+                  {promos.map(({Description: [{shortDescription}]}) =>
+                    (<PromoItem key={shortDescription}>
+                      <Icon icon="tag" />{'   '}{shortDescription}
+                    </PromoItem>))}
                 </Promotions>
               </Padded>
               <Padded>
-                  <input type="number" min={0} />
+                  <CounterContainer>
+                    <span style={{float: 'left'}}>quantity:</span>
+                    <Counter>
+                      <Icon
+                        icon="remove"
+                        onClick={this.handleDecrement}
+                        style={{color: btnGrey, marginRight: '0.4rem'}}
+                      />
+                        {this.state.quantity}
+                      <Icon
+                        icon="add"
+                        onClick={this.handleIncrement } 
+                        style={{color: btnGrey, marginLeft: '0.4rem'}}
+                      />
+                    </Counter>
+                  </CounterContainer>
               </Padded>
               <Padded>
                   <BoxButton color="red">PICK UP IN STORE</BoxButton>
                   <BoxButton color="red">ADD TO CART</BoxButton>
               </Padded>
               <Returns>
-                  <ReturnTitle>returns</ReturnTitle><ReturnDetails>{`This item must be returned within ${policyDays} days of the ship date. See return policy for details. Prices, promotions, styles and availability may very by store and online`}</ReturnDetails>
+                  <ReturnTitle>returns</ReturnTitle>
+                  <ReturnDetails>
+                    {`This item must be returned within ${policyDays} days of the ship date. 
+                    See return policy for details.
+                    Prices, promotions, styles and availability may very by store and online`}
+                  </ReturnDetails>
               </Returns>
               <Padded>
                   <RoundButton>ADD TO REGISTRY</RoundButton>

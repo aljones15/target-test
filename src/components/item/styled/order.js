@@ -58,3 +58,18 @@ export const Price = styled.h3({
     height: '1.4rem',
     float: 'left'
   })
+
+export const Counter = styled.span({
+  textAlign: 'center',
+  float: 'right'
+})
+
+export const CounterContainer = styled.div({
+  border: '1px solid #DDDDDD',
+  width: '50%',
+  paddingLeft: '5px',
+  paddingRight: '5px',
+  paddingTop: '0.1rem',
+  height: '1.5rem',
+  textAlign: 'left',
+})
