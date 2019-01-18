@@ -13,14 +13,19 @@ export const ReviewSection = styled.div(({float, bg = backgroundColor}) => ({
     backgroundColor: bg,
     float,
     width: '50%',
-    height: '100%'
+    height: '20rem',
 }))
 
 export const ReviewTitle = styled.div({
     textAlign: 'left',
-    borderBottom: '1px solid black',
+    borderBottom: '1px solid rgba(0,0,0,0.1)',
     padding: '0.25rem',
-    marginBottom: '0.5rem'
+    marginBottom: '0.5rem',
+})
+
+export const ReviewBody = styled.div({
+    padding: '1rem',
+    paddingTop: '0.25rem'
 })
 
 export const Stars = styled.span({
