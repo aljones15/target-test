@@ -1,14 +1,14 @@
 import styled from '@emotion/styled'
 
 const Row = styled.div`
-    boxSizing: border-box;
+    box-sizing: border-box;
     display: flex;
     width: 100%;
     height: 100%;
     margin: 1rem;
     padding: 1rem;
-    flexDirection: row;
-    alignItems: baseline;
+    flex-direction: row;
+    align-items: baseline;
     @media (orientation: portrait) {
       flex-direction: column;
       margin: 0px;

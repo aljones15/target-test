@@ -14,6 +14,9 @@ export const ReviewSection = styled.div(({float, bg = backgroundColor}) => ({
     float,
     width: '50%',
     height: '20rem',
+    '@media (orientation: portrait)': {
+        height: '25rem'
+    }
 }))
 
 export const ReviewTitle = styled.div({
