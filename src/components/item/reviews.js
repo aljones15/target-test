@@ -37,7 +37,7 @@ class ItemReviews extends React.PureComponent {
                       {`view all ${totalReviews} reviews`}
                     </TopText>
                 </Top>
-                <div style={{width: '100%', float: 'clear'}}>
+                <div>
                     <ReviewSection float="left">
                       <ReviewTitle>
                           <h4>Pro</h4>
