@@ -25,7 +25,7 @@ class ItemReviews extends React.PureComponent {
         const [reviews] = this.props.reviews
         const { consolidatedOverallRating, totalReviews, Con, Pro } = reviews
         return(
-            <div style={{width: '100%'}}>
+            <div style={{width: '100%', maxWidth: '45rem'}}>
                 <Top>
                     <TopText align="left">
                       <Stars>
