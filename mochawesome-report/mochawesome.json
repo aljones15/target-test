@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 4,
-    "tests": 7,
-    "passes": 7,
+    "suites": 5,
+    "tests": 8,
+    "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2019-01-19T16:34:02.971Z",
-    "end": "2019-01-19T16:34:03.001Z",
-    "duration": 30,
-    "testsRegistered": 7,
+    "start": "2019-01-19T16:39:22.537Z",
+    "end": "2019-01-19T16:39:22.570Z",
+    "duration": 33,
+    "testsRegistered": 8,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "7a39dba0-ea58-4fe2-9755-1512ffe17fe0",
+    "uuid": "be8ec8ea-22c7-4233-a31f-9e54f1e60b3b",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,16 +28,16 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "ba4e3b4d-0c55-46ca-8393-c54077669416",
-        "title": "<Highlights />",
-        "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/highlights.unit.js",
-        "file": "/test/unit/highlights.unit.js",
+        "uuid": "c53b31c5-49d4-495b-acb5-9bc98a0ec107",
+        "title": "<Carousel />",
+        "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/confedate.unit.js",
+        "file": "/test/unit/confedate.unit.js",
         "beforeHooks": [],
         "afterHooks": [],
         "tests": [
           {
             "title": "should render",
-            "fullTitle": "<Highlights /> should render",
+            "fullTitle": "<Carousel /> should render",
             "timedOut": false,
             "duration": 4,
             "state": "passed",
@@ -48,14 +48,14 @@
             "code": "var comp = setup();\n(0, _chai.expect)(comp).not.to.be.null;\n(0, _chai.expect)(comp.exists()).to.be.true;",
             "err": {},
             "isRoot": false,
-            "uuid": "53c6c83f-2eb3-409e-9e36-f82a67136b2c",
+            "uuid": "80441946-7d18-4974-9bb8-a54e60d13c2d",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "53c6c83f-2eb3-409e-9e36-f82a67136b2c"
+          "80441946-7d18-4974-9bb8-a54e60d13c2d"
         ],
         "failures": [],
         "pending": [],
@@ -66,16 +66,16 @@
         "_timeout": 2000
       },
       {
-        "uuid": "202ffe50-927f-4168-a0cd-ec215828fc3d",
-        "title": "<Image />",
-        "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/image.unit.js",
-        "file": "/test/unit/image.unit.js",
+        "uuid": "abdb1ad5-39fa-4827-b438-b3beedf988bc",
+        "title": "<Highlights />",
+        "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/highlights.unit.js",
+        "file": "/test/unit/highlights.unit.js",
         "beforeHooks": [],
         "afterHooks": [],
         "tests": [
           {
             "title": "should render",
-            "fullTitle": "<Image /> should render",
+            "fullTitle": "<Highlights /> should render",
             "timedOut": false,
             "duration": 1,
             "state": "passed",
@@ -86,14 +86,14 @@
             "code": "var comp = setup();\n(0, _chai.expect)(comp).not.to.be.null;\n(0, _chai.expect)(comp.exists()).to.be.true;",
             "err": {},
             "isRoot": false,
-            "uuid": "155c54db-3089-4a9e-aa10-ef2435651f9e",
+            "uuid": "43c6dbd7-86a0-40d7-b6fb-d38b79eea7d0",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "155c54db-3089-4a9e-aa10-ef2435651f9e"
+          "43c6dbd7-86a0-40d7-b6fb-d38b79eea7d0"
         ],
         "failures": [],
         "pending": [],
@@ -104,7 +104,45 @@
         "_timeout": 2000
       },
       {
-        "uuid": "dc81080e-32a3-44da-afaa-cef10a63bd4f",
+        "uuid": "4d29b6a1-c012-4c9f-b736-82b1f0dbaaf2",
+        "title": "<Image />",
+        "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/image.unit.js",
+        "file": "/test/unit/image.unit.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should render",
+            "fullTitle": "<Image /> should render",
+            "timedOut": false,
+            "duration": 0,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var comp = setup();\n(0, _chai.expect)(comp).not.to.be.null;\n(0, _chai.expect)(comp.exists()).to.be.true;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "3fc0fcd5-c8cf-4be3-8fa1-eb2cec21105d",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "3fc0fcd5-c8cf-4be3-8fa1-eb2cec21105d"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 0,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      },
+      {
+        "uuid": "fdcb33b1-2089-4919-9afa-cce37b97331f",
         "title": "<Order />",
         "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/order.unit.js",
         "file": "/test/unit/order.unit.js",
@@ -124,7 +162,7 @@
             "code": "var order = setup();\n(0, _chai.expect)(order).not.to.be.null;\n(0, _chai.expect)(order.exists()).to.be.true;",
             "err": {},
             "isRoot": false,
-            "uuid": "a0f779a7-fae3-4520-9548-d0e5cbffb0be",
+            "uuid": "ee14f89b-2c24-4e88-b3c9-f722fecc4ad4",
             "isHook": false,
             "skipped": false
           },
@@ -141,7 +179,7 @@
             "code": "var order = setup();\n(0, _chai.expect)(order).not.to.be.null;\n(0, _chai.expect)(order.state('quantity')).to.equal(0);\nvar minus = order.find('[data-test=\"offers-counter-minus\"]');\n(0, _chai.expect)(minus.length).to.equal(1);\nminus.simulate('click');\n(0, _chai.expect)(order.state('quantity')).to.equal(0);",
             "err": {},
             "isRoot": false,
-            "uuid": "22fc20f9-c939-41b1-a3fa-0c690a382ad5",
+            "uuid": "48210496-e598-424c-9e33-80eee9d52504",
             "isHook": false,
             "skipped": false
           },
@@ -158,7 +196,7 @@
             "code": "var order = setup();\n(0, _chai.expect)(order).not.to.be.null;\n(0, _chai.expect)(order.state('quantity')).to.equal(0);\nvar plus = order.find('[data-test=\"offers-counter-plus\"]');\n(0, _chai.expect)(plus.length).to.equal(1);\nplus.simulate('click');\n(0, _chai.expect)(order.state('quantity')).to.equal(1);",
             "err": {},
             "isRoot": false,
-            "uuid": "62c86cdc-4c45-4d08-bf3f-ddcfce4ea1a7",
+            "uuid": "a3802399-2d5f-4bdd-9247-7f5720e1791f",
             "isHook": false,
             "skipped": false
           },
@@ -166,7 +204,7 @@
             "title": "should decrement if greater than 0",
             "fullTitle": "<Order /> should decrement if greater than 0",
             "timedOut": false,
-            "duration": 2,
+            "duration": 3,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -175,28 +213,28 @@
             "code": "var order = setup();\n(0, _chai.expect)(order).not.to.be.null;\nvar rand = Math.floor(Math.random() * 100);\norder.setState({\n  quantity: rand\n});\n(0, _chai.expect)(order.state('quantity')).to.equal(rand);\nvar minus = order.find('[data-test=\"offers-counter-minus\"]');\n(0, _chai.expect)(minus.length).to.equal(1);\nminus.simulate('click');\n(0, _chai.expect)(order.state('quantity')).to.equal(rand - 1);",
             "err": {},
             "isRoot": false,
-            "uuid": "07f02d95-95d9-425c-a6d4-5d0cd0020baa",
+            "uuid": "fc5d7a2e-9139-46a8-93ae-0807a66c47ad",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "a0f779a7-fae3-4520-9548-d0e5cbffb0be",
-          "22fc20f9-c939-41b1-a3fa-0c690a382ad5",
-          "62c86cdc-4c45-4d08-bf3f-ddcfce4ea1a7",
-          "07f02d95-95d9-425c-a6d4-5d0cd0020baa"
+          "ee14f89b-2c24-4e88-b3c9-f722fecc4ad4",
+          "48210496-e598-424c-9e33-80eee9d52504",
+          "a3802399-2d5f-4bdd-9247-7f5720e1791f",
+          "fc5d7a2e-9139-46a8-93ae-0807a66c47ad"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 12,
+        "duration": 13,
         "root": false,
         "rootEmpty": false,
         "_timeout": 2000
       },
       {
-        "uuid": "87ec2160-cfb0-453b-ab29-eb4fa30de0bf",
+        "uuid": "85176ecb-132b-4a82-abda-35a3673e166b",
         "title": "<Reviews />",
         "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/review.unit.js",
         "file": "/test/unit/review.unit.js",
@@ -216,14 +254,14 @@
             "code": "var comp = setup();\n(0, _chai.expect)(comp).not.to.be.null;\n(0, _chai.expect)(comp.exists()).to.be.true;",
             "err": {},
             "isRoot": false,
-            "uuid": "d84addbc-1780-4d6c-8f8f-b3b3da8d3a49",
+            "uuid": "810b28b7-a22e-4ff2-a169-238bb04b019e",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "d84addbc-1780-4d6c-8f8f-b3b3da8d3a49"
+          "810b28b7-a22e-4ff2-a169-238bb04b019e"
         ],
         "failures": [],
         "pending": [],
