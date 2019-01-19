@@ -1,14 +1,14 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import Reviews from '../../src/components/item/reviews'
+import Highlights from '../../src/components/item/highlights'
 import Data from '../../resources/items.json'
 
-describe('<Reviews />', function() {
+describe('<Highligts />', function() {
     function setup() {
         const {CatalogEntryView: [entry]} = Data
-        const { CustomerReview } = entry
-        return shallow(<Reviews reviews={CustomerReview} />)
+        const { ItemDescription } = entry
+        return shallow(<Highlights description={ItemDescription} />)
     }
     it('should render', function() {
         const comp = setup()

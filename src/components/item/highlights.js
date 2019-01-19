@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Highlights({description}) {
-    console.log('Highlights', description)
     const [{features}] = description
     return(
         <div>
