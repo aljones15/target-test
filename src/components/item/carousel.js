@@ -16,17 +16,17 @@ class Carousel extends React.PureComponent {
         const Primary = uris.PrimaryImage[0].image
         const Alternatives = uris.AlternateImages || []
         return(
-            <Container>
-                <Title>{title}</Title>
-                <div id="main-image">
+            <Container data-test="carousel">
+                <Title data-test="carousel-title">{title}</Title>
+                <div id="main-image" data-test="carousel-main-image">
                   <Image src={Primary} size="300px" />
                 </div>
                 <div>
                 <Icon icon="zoom-in" /> <span>view larger</span>
                 </div>
-                <Thumbnails id="carousel">
-                  <Stretcher size={Alternatives.length}>
-                    {Alternatives.map(({image}) => <Image key={image} src={image} />)}
+                <Thumbnails id="carousel" data-test="carousel-thumbnails">
+                  <Stretcher size={Alternatives.length} data-test="carousel-stretcher">
+                    {Alternatives.map(({image}) => <Image data-test="carousel-img" key={image} src={image} />)}
                   </Stretcher>
                 </Thumbnails>
             </Container>

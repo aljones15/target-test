@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 import Highlights from '../../src/components/item/highlights'
 import Data from '../../resources/items.json'
 
-describe('<Highligts />', function() {
+describe('<Highlights />', function() {
     function setup() {
         const {CatalogEntryView: [entry]} = Data
         const { ItemDescription } = entry
