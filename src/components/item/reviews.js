@@ -17,7 +17,7 @@ class ItemReviews extends React.PureComponent {
          */
         const stars = [];
         for(let i = 0; i < amount; i++) {
-            stars.push(<Icon icon="star" />)
+            stars.push(<Icon key={i} icon="star" />)
         }
         return stars;
     }
@@ -25,8 +25,8 @@ class ItemReviews extends React.PureComponent {
         const [reviews] = this.props.reviews
         const { consolidatedOverallRating, totalReviews, Con, Pro } = reviews
         return(
-            <div style={{width: '100%', maxWidth: '45rem'}}>
-                <Top>
+            <div data-test="promotions-page" style={{width: '100%', maxWidth: '45rem'}}>
+                <Top data-test="promotions-top">
                     <TopText align="left">
                       <Stars>
                         {this.makeStars(consolidatedOverallRating)}
