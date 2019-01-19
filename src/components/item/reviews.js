@@ -25,8 +25,8 @@ class ItemReviews extends React.PureComponent {
         const [reviews] = this.props.reviews
         const { consolidatedOverallRating, totalReviews, Con, Pro } = reviews
         return(
-            <div data-test="promotions-page" style={{width: '100%', maxWidth: '45rem'}}>
-                <Top data-test="promotions-top">
+            <div data-test="reviews-page" style={{width: '100%', maxWidth: '45rem'}}>
+                <Top data-test="reviews-top">
                     <TopText align="left">
                       <Stars>
                         {this.makeStars(consolidatedOverallRating)}
@@ -37,7 +37,7 @@ class ItemReviews extends React.PureComponent {
                     </TopText>
                 </Top>
                 <div>
-                    <ReviewSection float="left">
+                    <ReviewSection float="left" data-test="reviews-pro">
                       <ReviewTitle>
                           <h4>Pro</h4>
                           <em>Most helpful 4-5 star review</em>
@@ -53,7 +53,7 @@ class ItemReviews extends React.PureComponent {
 
                       </ReviewBody>
                     </ReviewSection>
-                    <ReviewSection float="right">
+                    <ReviewSection float="right" data-test="reviews-con">
                       <ReviewTitle>
                           <h4>Con</h4>
                           <em>Most helpful 1-2 star review</em>
