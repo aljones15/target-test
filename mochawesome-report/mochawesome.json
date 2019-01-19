@@ -1,23 +1,79 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2019-01-19T14:57:37.350Z",
-    "end": "2019-01-19T14:57:37.352Z",
-    "duration": 2,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "start": "2019-01-19T15:57:42.059Z",
+    "end": "2019-01-19T15:57:42.117Z",
+    "duration": 58,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
     "passPercentClass": "success",
-    "pendingPercentClass": "success"
+    "pendingPercentClass": "danger"
   },
-  "suites": false,
+  "suites": {
+    "uuid": "edcb7511-3718-44c7-8d37-133d3339ec89",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "426bac88-b007-48c8-9485-826f3917d671",
+        "title": "<Order />",
+        "fullFile": "/Users/andrewjones/Programs/javascript/target/target/test/unit/order.unit.js",
+        "file": "/test/unit/order.unit.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should render",
+            "fullTitle": "<Order /> should render",
+            "timedOut": false,
+            "duration": 50,
+            "state": "passed",
+            "speed": "medium",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var order = setup();\n(0, _chai.expect)(order).not.to.be.null;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "06104a19-3601-440d-9d36-9c8ef47eb6b3",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "06104a19-3601-440d-9d36-9c8ef47eb6b3"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 50,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
   "copyrightYear": 2019
 }

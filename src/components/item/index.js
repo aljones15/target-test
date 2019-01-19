@@ -21,7 +21,6 @@ export default ({children, skip, take}) => {
       }`}
       render={({allResourcesJson: {edges: [{node}]}}) => {
           const { CatalogEntryView: [entry] } = node
-          console.log('entry', entry)
           const { 
             title, Images, 
             CustomerReview, ItemDescription, 

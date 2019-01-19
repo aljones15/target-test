@@ -19,6 +19,7 @@ class Order extends React.PureComponent {
             const next = --quantity
             this.setState({quantity: next})
         }
+        return null
     }
     handleIncrement = () => this.setState(({quantity}) => ({quantity: ++quantity}))
     render() {
@@ -31,12 +32,17 @@ class Order extends React.PureComponent {
         const [{ReturnPolicyDetails: [{policyDays}]}] = returns
         const btnGrey = '#AAAAAA'
         return(
-            <div id="offers">
+            <div id="offers" data-test="offers-page">
               <Padded id="price">
-                <Price>{price.formattedPriceValue}</Price> <Text color="grey">{price.priceQualifier}</Text>
+                <Price data-test="offer-price">
+                  {price.formattedPriceValue}
+                </Price>
+                <Text color="grey">
+                  {price.priceQualifier}
+                </Text>
               </Padded>
               <Padded>
-                <Promotions>
+                <Promotions data-test="offers-promotions">
                   {promos.map(({Description: [{shortDescription}]}) =>
                     (<PromoItem key={shortDescription}>
                       <Icon icon="tag" />{'   '}{shortDescription}
@@ -46,17 +52,19 @@ class Order extends React.PureComponent {
               <Padded>
                   <CounterContainer>
                     <span style={{float: 'left'}}>quantity:</span>
-                    <Counter>
+                    <Counter data-test="offers-counter">
                       <Icon
                         icon="remove"
                         onClick={this.handleDecrement}
                         style={{color: btnGrey, marginRight: '0.4rem'}}
+                        data-test="offers-counter-minus"
                       />
                         {this.state.quantity}
                       <Icon
                         icon="add"
                         onClick={this.handleIncrement } 
                         style={{color: btnGrey, marginLeft: '0.4rem'}}
+                        data-test="offers-counter-plus"
                       />
                     </Counter>
                   </CounterContainer>
