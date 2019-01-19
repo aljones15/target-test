@@ -44,5 +44,4 @@ describe('<Order />', function() {
         minus.simulate('click')
         expect(order.state('quantity')).to.equal(rand - 1) 
     })
-
 })

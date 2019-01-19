@@ -28,11 +28,11 @@ export default ({children, skip, take}) => {
             ReturnPolicy } = entry
           return (
           <React.Fragment>
-          <Row>
-            <Box>
+          <Row data-test="item-page">
+            <Box data-test="carousel-box">
               <Carousel title={title} images={Images} />
             </Box>
-            <Box>
+            <Box data-test="order-box">
               <Order
                 promos={Promotions}
                 offers={Offers}
@@ -41,10 +41,10 @@ export default ({children, skip, take}) => {
             </Box>
           </Row>
           <Row>
-            <Box>
+            <Box data-test="reviews-box">
               <Reviews reviews={CustomerReview} />
             </Box>
-            <Box>
+            <Box data-test="highlights-box">
               <Highlights description={ItemDescription} />
             </Box>
           </Row>   
