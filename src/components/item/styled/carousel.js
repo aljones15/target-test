@@ -4,7 +4,8 @@ import { css } from '@emotion/core'
 
 export const Title = styled.h1({
     textAlign: 'center',
-    fontSize: '1rem'
+    fontSize: '1rem',
+    width: '80%'
   })
 
   export const ImageHolder = styled.span({
