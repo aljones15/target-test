@@ -19,8 +19,8 @@ export default ({children, skip, take}) => {
           }
         }
       }`}
-      render={({allResourcesJson: {edges: [{node}]}}) => {
-          const { CatalogEntryView: [entry] } = node
+      render={({allResourcesJson: {edges: [{node}] = [{node: {}}]}}) => {
+          const { CatalogEntryView: [entry] = [{}] } = node
           const { 
             title, Images, 
             CustomerReview, ItemDescription, 
